@@ -2,15 +2,15 @@ class todoservice{
     todo_data = {
         "todo":[{
             "title": "T1",
-            "description": "D1",
+            "description": "Deepu",
             "done": false
         },{
             "title": "T1",
-            "description": "D1",
+            "description": "Deepu",
             "done": false
         },{
             "title": "T1",
-            "description": "D1",
+            "description": "Deepu",
             "done": false
         }]
     }
@@ -24,16 +24,11 @@ class todoservice{
 
     add_todo(todo){
         // Your code here
+        this.todo_data.todo.push(todo);
+        // console.log(todo);
+        return this.todo_data.todo[this.todo_data.todo.length-1];
     }
 
-    delete_todo(id){
-        // Your code here
-    }
-
-    update_todo(id, todo){
-        // Your code here
-    }
 }
-
 
 module.exports= todoservice;
