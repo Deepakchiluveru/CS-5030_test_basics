@@ -49,27 +49,50 @@ describe('todo test suite', () => {
 
     // // //test case for update
 
-    const update_test = [{
-        "title": "DeepakUpdate1",
-        "description": "DeepuUpdate1",
+    // const update_test = [{
+    //     "title": "DeepakUpdate1",
+    //     "description": "DeepuUpdate1",
+    //     "done": false
+    // },
+    // {
+    //     "title": "DeepakUpdate2",
+    //     "description": "DeepuUpdate2",
+    //     "done": false
+    // },
+    // {
+    //     "title": "DeepakUpdate3",
+    //     "description": "DeepuUpdate3",
+    //     "done": true
+    // }
+    // ]
+
+    // test("Update-todo", () => {
+    //     for (i = 0; i < update_test.length; i++) {
+    //         let obj = update_test[i];
+    //         expect(todo_service.update_todo(i, obj)).toEqual(obj);
+    //     }
+    // })       
+
+    //test case for delete
+
+    const delete_test = [{
+        "title": "DeepakDelete1",
+        "description": "Deepudelete1",
         "done": false
     },
     {
-        "title": "DeepakUpdate2",
-        "description": "DeepuUpdate2",
+        "title": "DeepakDelete2",
+        "description": "DeepuDelete2",
         "done": false
     },
     {
-        "title": "DeepakUpdate3",
-        "description": "DeepuUpdate3",
+        "title": "DeepakDelete3",
+        "description": "DeepuDelete3",
         "done": true
     }
     ]
-
-    test("Update-todo", () => {
-        for (i = 0; i < update_test.length; i++) {
-            let obj = update_test[i];
-            expect(todo_service.update_todo(i, obj)).toEqual(obj);
-        }
-    })       
+    test("delete_todo", ()=> {
+        todo_service.delete_todo(3);
+        expect(todo_service.get_todos().length>1);
+    });
 })
