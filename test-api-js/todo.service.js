@@ -1,16 +1,16 @@
 class todoservice {
     todo_data = {
         "todo": [{
-            "title": "T1",
-            "description": "Deepu",
+            "title": "learning ",
+            "description": "JS",
             "done": false
         }, {
-            "title": "T1",
-            "description": "Deepu",
+            "title": "Reading",
+            "description": "Novel ",
             "done": false
         }, {
-            "title": "T1",
-            "description": "Deepu",
+            "title": "Playing",
+            "description": "Cricket",
             "done": false
         }]
     }
@@ -22,22 +22,22 @@ class todoservice {
         return this.todos;
     }
 
-    add_todo(todo) {
+    // add_todo(todo) {
+    //     // Your code here
+    //     this.todo_data.todo.push(todo);
+    //     return this.todo_data.todo[this.todo_data.todo.length - 1];
+    // }
+
+    // update_todo(id, todo) {
+    //     // Your code here
+    //     this.todo_data.todo[id] = todo;
+    //     return this.todo_data.todo[id];  
+    // }
+
+    delete_todo(id){
         // Your code here
-        this.todo_data.todo.push(todo);
-        // console.log(todo);
-        return this.todo_data.todo[this.todo_data.todo.length - 1];
-    }
-
-
-    update_todo(id, todo) {
-        // Your code here
-        // console.log(this.todo_data);
-        this.todo_data.todo[id] = todo;
-        return this.todo_data.todo[id];
-        // console.log(this.todo_data);
-    }
-
+    this.todos = this.todo_data.todo.pop(id);
+    return this.todo_data;
 }
-
+}
 module.exports = todoservice;
